@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Plan</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://webstockreview.net/images/budget-clipart-personal-budget-1.jpg">
+
+    <!-- Bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</head>
+<body class="bg-secondary-subtle">
+    <div class="container">
+        <div class="row">
+<div class="col-6  ">
+    <div class=" text-center mt-5">
+        <img src="https://i.pinimg.com/originals/b6/ca/d6/b6cad6b3946d46c44b160b639da858ca.jpg" alt="" height="300px" width="500px" class="m-5    ">
+    <h3 class="text-danger  fst-italic"> A penny saved is a penny earned!</h3>
+    </div>
+</div>
+<div class="col-6 ">
+    <div class="w-100% m-auto border border-4 border-dark-subtle mt-5 rounded p-5" >
+        <h1 class="text-center">Login</h1>
+        <form action="" class="">
+            <label for="" >UserName:</label>
+            <input type="text"  id="uname" class="form-control mb-3">
+            <label for="">Password:</label> 
+            <input type="password" id="upwd" class="form-control mb-3">
+            Create an account:  <a href="./register.html" > Register</a>
+            <div class="text-center mt-4">
+                <button class="btn btn-success m-2" type="button" onclick="login()">Login</button>
+            </div>
+    </div>
+
+     
+</form>
+
+</div>
+        </div>
+    </div>
+   
+</body>
+<script >
+
+    function login()
+{
+// let uname1=document.getElementById("uname")
+// let pass=document.getElementById("upwd")
+console.log(uname.value);
+console.log(upwd.value);
+    if(uname.value=="" || upwd.value=="")
+{
+    alert("Please enter any inputs")
+}
+else{
+    if(uname.value in localStorage)
+    {
+        user1=JSON.parse(localStorage.getItem(uname.value));
+        console.log(user1);
+        if(user1.pwd == upwd.value)
+        {
+            localStorage.setItem("User",user1.username)
+            alert("Login successfull")
+            window.location="./budget.html"
+        }
+    }
+}
+}
+</script>
+</html>
