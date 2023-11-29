@@ -2,7 +2,7 @@ if(window.location.href.includes('budget.html'))
 {
    let currentuser=localStorage.getItem('User') ;
    console.log("+++",currentuser);
-   document.getElementById('headg').innerHTML=`Hai ${currentuser}`
+   document.getElementById('headg').innerHTML=`Welcome ${currentuser}`
 
 }
 
